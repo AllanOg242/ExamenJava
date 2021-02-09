@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="618.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="informatique.controller.serviceController">
+   <children>
+      <TabPane layoutX="7.0" prefHeight="619.0" prefWidth="839.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Nouveau Utilisateur et Client">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="53.0" text="Nom" />
+                        <Label layoutX="25.0" layoutY="95.0" text="Prenom" />
+                        <Label layoutX="25.0" layoutY="326.0" text="Prenom" />
+                        <Label layoutX="25.0" layoutY="370.0" text="Telephone" />
+                        <Label layoutX="25.0" layoutY="413.0" text="Adresse" />
+                        <Label layoutX="25.0" layoutY="457.0" text="Type Client" />
+                        <TextField fx:id="tfdNomUser" layoutX="110.0" layoutY="49.0" prefHeight="25.0" prefWidth="192.0" />
+                        <TextField fx:id="tfdPrenomUser" layoutX="110.0" layoutY="91.0" prefHeight="25.0" prefWidth="192.0" />
+                        <TextField fx:id="tfdPrenomClient" layoutX="110.0" layoutY="322.0" prefHeight="25.0" prefWidth="192.0" />
+                        <TextField fx:id="tfdTelephoneClient" layoutX="110.0" layoutY="366.0" prefHeight="25.0" prefWidth="192.0" />
+                        <TextField fx:id="tfdAdresseClient" layoutX="110.0" layoutY="409.0" prefHeight="25.0" prefWidth="192.0" />
+                        <Label layoutX="25.0" layoutY="280.0" text="Nom" />
+                        <TextField fx:id="tfdNomClient" layoutX="110.0" layoutY="276.0" prefHeight="25.0" prefWidth="191.0" />
+                        <Label layoutX="25.0" layoutY="136.0" text="Profil" />
+                        <ComboBox fx:id="cbxProfilUser" layoutX="110.0" layoutY="132.0" prefHeight="25.0" prefWidth="191.0" />
+                        <ComboBox fx:id="cbxTypeClient" layoutX="110.0" layoutY="453.0" prefHeight="25.0" prefWidth="191.0" />
+                        <Button fx:id="btnAjouterUser" layoutX="15.0" layoutY="195.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="113.0" text="Ajouter Utilisateur" />
+                        <Button layoutX="15.0" layoutY="516.0" mnemonicParsing="false" onAction="#addClient" prefHeight="25.0" prefWidth="90.0" text="Ajouter Client" />
+                        <Button fx:id="btnModifierUser" layoutX="139.0" layoutY="195.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="25.0" prefWidth="126.0" text="Modifier Utilisateur" />
+                        <Button fx:id="btnSupprimerUser" layoutX="275.0" layoutY="195.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="132.0" text="Supprimer Utilisateur" />
+                        <Button fx:id="btnModifierClient" layoutX="116.0" layoutY="516.0" mnemonicParsing="false" onAction="#updateClient" prefHeight="25.0" prefWidth="102.0" text="Modifier Client" />
+                        <Button fx:id="btnSupprimerClient" layoutX="233.0" layoutY="516.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="25.0" prefWidth="108.0" text="Supprimer Client" />
+                        <Label layoutX="120.0" layoutY="240.0" text="CLIENT" />
+                        <Label layoutX="105.0" layoutY="14.0" text="UTILISATEUR" />
+                        <TableView fx:id="tabUtilisateur" layoutX="420.0" layoutY="10.0" prefHeight="210.0" prefWidth="408.0">
+                          <columns>
+                            <TableColumn fx:id="colNomUser" prefWidth="128.0" text="Nom" />
+                            <TableColumn fx:id="colPrenomUser" prefWidth="146.0" text="Prenom" />
+                              <TableColumn fx:id="colProfilUser" prefWidth="130.0" text="Profil" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tabClient" layoutX="349.0" layoutY="276.0" prefHeight="263.0" prefWidth="479.0">
+                           <columns>
+                              <TableColumn fx:id="colNomClient" prefWidth="90.0" text="Nom" />
+                              <TableColumn fx:id="colPrenomClient" prefWidth="93.0" text="Prenom" />
+                              <TableColumn fx:id="colAdresseClient" prefWidth="92.0" text="Adresse" />
+                              <TableColumn fx:id="colTelephoneClient" prefWidth="100.0" text="Telephone" />
+                              <TableColumn fx:id="colTypeClient" prefWidth="98.0" text="Type Client" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Nouvelle Commande">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="730.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="18.0" text="Numero" />
+                        <Label layoutX="26.0" layoutY="71.0" text="quantite" />
+                        <TextField fx:id="tfdNumero" layoutX="125.0" layoutY="14.0" prefHeight="25.0" prefWidth="216.0" />
+                        <TextField fx:id="tfdQuantite" layoutX="125.0" layoutY="67.0" prefHeight="25.0" prefWidth="216.0" />
+                        <Label layoutX="363.0" layoutY="71.0" text="Libelle" />
+                        <Label layoutX="360.0" layoutY="22.0" text="Prix" />
+                        <TextField fx:id="tfdLibelle" layoutX="430.0" layoutY="67.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="tfdPrix" layoutX="430.0" layoutY="17.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button fx:id="btnEnregistrerDetCom" layoutX="49.0" layoutY="187.0" mnemonicParsing="false" onAction="#addDetCom" prefHeight="25.0" prefWidth="150.0" text="Enregistrer" />
+                        <TableView fx:id="tabCommande" layoutX="19.0" layoutY="255.0" prefHeight="241.0" prefWidth="722.0">
+                          <columns>
+                            <TableColumn fx:id="colNumero" prefWidth="114.0" text="Numero" />
+                            <TableColumn fx:id="colQuantite" minWidth="5.0" prefWidth="108.0" text="Quantite" />
+                              <TableColumn fx:id="colDateLiv" prefWidth="119.0" text="Date livraison" />
+                              <TableColumn fx:id="colLibelle" prefWidth="123.0" text="Libelle" />
+                              <TableColumn fx:id="colPrix" prefWidth="109.0" text="Prix" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnModifierDetCom" layoutX="270.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateDetCom" prefHeight="25.0" prefWidth="150.0" text="Modifier" />
+                        <Button fx:id="btnSupprimerDetCom" layoutX="483.0" layoutY="187.0" mnemonicParsing="false" onAction="#deleteDetCom" prefHeight="25.0" prefWidth="150.0" text="Supprimer" />
+                        <Label layoutX="26.0" layoutY="128.0" text="Date livraison" />
+                        <TextField fx:id="tfdDateLiv" layoutX="124.0" layoutY="121.0" prefHeight="25.0" prefWidth="218.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

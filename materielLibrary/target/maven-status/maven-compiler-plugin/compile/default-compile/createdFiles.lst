@@ -1,0 +1,17 @@
+informatique\model\Produit.class
+informatique\service\IProfil.class
+informatique\service\IProduit.class
+informatique\model\Commande.class
+informatique\model\Facture.class
+informatique\model\Profil.class
+informatique\service\IFacture.class
+informatique\service\IClient.class
+informatique\service\IUser.class
+informatique\service\ICommande.class
+informatique\model\DetailCommande.class
+informatique\model\Etat.class
+informatique\model\User.class
+informatique\model\TypeClient.class
+informatique\service\ITypeClient.class
+informatique\model\Client.class
+informatique\service\IDetailCommande.class
